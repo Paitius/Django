@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>My title</title>
+    <style media='screen'>
+        body {
+            background-color: rgb(36, 197, 138);
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        input {
+            width: 70%;
+            text-align: center;
+            background-color: azure;
+        }
+
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Skroc url</h1>
+    <form action='/shorten' , method='post'>
+        {% csrf_token %}
+        <input type="text" name="url" placeholder="long url">
+        <button type="submit"> generuj </button>
+
+    </form>
+</body>
+
+</html>
